@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px;
+    font-style: italic;
+    background-image: url(img/culinária-regional-brasileira.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    margin: 5px;
+    padding: 30px 10px;
+    font-weight: bold;
+    height: 100px;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    border: 1px solid #58442c;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.center {
+    color: #58442c;
+    font-size: 35px;
+}
+
+.area-menu {
+    display: flex;
+    font-size: 18px;
+    margin: 20px;
+    float: right;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.area-menu ul {
+    list-style-type: none;
+}
+
+.area-menu ul li {
+    display: inline-block;
+}
+
+.area-menu ul li a {
+    color: #58442c;
+    text-decoration: none;
+    border-radius: 50px 0px;
+    padding: 5px 20px;
+    transition: 0.5s;
+}
+
+.area-menu ul li a:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}
+
+main {
+    margin: 5px;
+    font-weight: bold;
+    color: #58442c;
+    background-color: rgba(250, 250, 210, 0.788);
+    padding: 10px;
+    border: 1px solid #58442c;
+    border-radius: 0px 0px 15px 15px;
+}
+
+main h2 {
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px 0px;
+}
+
+main p {
+    padding: 10px 10px;
+}
+
+.footer {
+    margin: 10px;
+    color: lightgoldenrodyellow;
+}
+
+.box {
+    color: #58442c;
+    font-style: italic;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgoldenrodyellow;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+fieldset {
+    padding: 5px;
+    border: 3px solid #58442c;
+}
+
+legend {
+    color: lightgoldenrodyellow;
+    border: 1px solid lightgoldenrodyellow;
+    padding: 10px;
+    text-align: center;
+    background-color: #58442c;
+    border-radius: 8px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #58442c;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #58442c;
+}
+
+#data_nascimento {
+    color: #58442c;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Botão e link com aparência idêntica */
+.cliente,
+button.btn-editar,
+input.btn-editar,
+button.btn-cadastrar,
+input.btn-cadastrar[type="submit"] {
+    margin: 5px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: inherit;
+    /* usa a mesma fonte do container */
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #58442c;
+    background-color: rgb(160, 142, 102);
+    border-radius: 50px 0px;
+    border: none;
+    /* remove borda nativa */
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+    line-height: normal;
+    /* ajusta altura da linha */
+    box-sizing: border-box;
+    /* garante que padding não altere tamanho */
+}
+
+.cliente:hover,
+button.btn-editar:hover,
+input.btn-editar:hover,
+button.btn-cadastrar:hover,
+input.btn-cadastrar[type="submit"]:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}
+
+.cliente {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px 30px;
+    color: #58442c;
+    background-color: rgb(160, 142, 102);
+    border-radius: 50px 0px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.cliente:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}

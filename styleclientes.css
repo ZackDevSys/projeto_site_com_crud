@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/culinária-regional-brasileira.jpg);
+    background-size: cover;
+}
+
+.table {
+    padding-bottom: 35px;
+    margin: 5% auto;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #58442c;
+    border-radius: 15px;
+    width: fit-content;
+    /* ou defina uma largura fixa */
+}
+
+.inputbox {
+    margin: 10px;
+    padding: 20px;
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+.title {
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+.subtitle {
+    font-size: 25px;
+}
+
+.edit {
+    cursor: pointer;
+    padding: 5px 20px;
+    color: #58442c;
+    border-radius: 50px 0px;
+    background-color: rgb(160, 142, 102);
+    text-decoration: none;
+    color: #58442c;
+    transition: 0.5s;
+}
+
+.edit:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}
+
+.excluir {
+    cursor: pointer;
+    padding: 5px 20px;
+    color: #58442c;
+    border-radius: 50px 0px;
+    background-color: rgb(160, 142, 102);
+    text-decoration: none;
+    color: #58442c;
+    transition: 0.5s;
+}
+
+.excluir:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}
+
+.add {
+    margin: 30px;
+    padding: 10px 30px;
+    color: #58442c;
+    background-color: rgb(160, 142, 102);
+    border-radius: 50px 0px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.add:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}
+
+.voltar {
+    margin: 30px;
+    padding: 10px 30px;
+    color: #58442c;
+    background-color: rgb(160, 142, 102);
+    border-radius: 50px 0px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.voltar:hover {
+    background-color: #58442c;
+    color: rgb(160, 142, 102);
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.mostrar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(250, 250, 210, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px 40px;
+    text-align: center;
+    color: #58442c;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-30px);
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.modal h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.modal h5 {
+    margin-bottom: 50px;
+    color: #6c5a3a;
+    font-weight: bold;
+}
+
+.botoes {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-del {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #c0392b;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-del:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+.btn-return {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: #58442c;
+    background-color: rgb(200, 200, 170);
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-return:hover {
+    background-color: rgb(220, 220, 190);
+    transform: scale(1.05);
+}
+
+/* Mensagens de status (sucesso / erro) */
+.msg {
+    margin: 20px auto;
+    padding: 15px 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid #58442c;
+    background-color: lightgoldenrodyellow;
+    color: #58442c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Efeito de fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sucesso: leve destaque em verde-amarelado */
+.msg.sucesso {
+    background-color: lightgoldenrodyellow;
+    border-color: #3c763d;
+}
+
+/* Erro: destaque em tom avermelhado */
+.msg.erro {
+    background-color: lightgoldenrodyellow;
+    border-color: #a94442;
+}

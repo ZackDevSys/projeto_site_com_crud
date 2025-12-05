@@ -61,6 +61,6 @@ O objetivo principal é demonstrar a aplicação de conceitos de backend e front
 
 ### 📌 Contato
 
-Para dúvidas ou sugestões, entre em contato comigo:
+Links para contato:
 
-✉️ isaactcosta20142@gmail.com | ✉️ zackdev2014@gmail.com
+🔗 linkedin.com/in/zack-dev

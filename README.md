@@ -63,4 +63,4 @@ O objetivo principal é demonstrar a aplicação de conceitos de backend e front
 
 Links para contato:
 
-🔗 linkedin.com/in/zack-dev
+🔗 www.linkedin.com/in/zack-dev
